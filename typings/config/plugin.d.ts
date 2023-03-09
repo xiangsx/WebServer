@@ -1,5 +1,6 @@
-// This file is created by egg-ts-helper@1.29.1
+// This file is created by egg-ts-helper@1.34.7
 // Do not modify this file!!!!!!!!!
+/* eslint-disable */
 
 import 'egg';
 import 'egg-onerror';
@@ -14,6 +15,9 @@ import 'egg-schedule';
 import 'egg-static';
 import 'egg-jsonp';
 import 'egg-view';
+import 'egg-super-router';
+import 'egg-redis';
+import 'egg-mysql';
 import { EggPluginItem } from 'egg';
 declare module 'egg' {
   interface EggPlugin {
@@ -29,5 +33,8 @@ declare module 'egg' {
     static?: EggPluginItem;
     jsonp?: EggPluginItem;
     view?: EggPluginItem;
+    superRouter?: EggPluginItem;
+    redis?: EggPluginItem;
+    mysql?: EggPluginItem;
   }
 }

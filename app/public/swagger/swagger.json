@@ -1,0 +1,1 @@
+{"openapi":"3.1.0","swagger":"2.0","info":{"title":"API","description":"API","version":"1.0.0"},"schemes":["https","http"],"basePath":"/api/","consumes":["application/x-www-form-urlencoded"],"produces":["application/json"],"paths":{"/hello":{"get":{"summary":"","tags":[],"parameters":[{"in":"body","schema":{"type":"object","properties":{},"additionalProperties":false}}]}}}}
