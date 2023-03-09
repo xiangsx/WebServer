@@ -71,9 +71,55 @@ module.exports = appInfo => {
     },
   };
 
+  const extenalConfig = {
+    elasticsearch: {
+      host: 'host:port',
+    },
+    redis: {
+      client: {
+        port: 6379,
+        host: 'host',
+        password: 'password',
+        db: 0,
+      },
+    },
+    mysql: {
+      clients: {
+        read: {
+          host: 'host',
+          port: 3306,
+          database: 'db',
+          user: 'user',
+          password: 'password',
+          dateStrings: true,
+        },
+        write: {
+          host: 'host',
+          port: 3306,
+          database: 'db',
+          user: 'user',
+          password: 'password',
+          dateStrings: true,
+        },
+      },
+    },
+    elk: {
+      host: 'host',
+      port: 5000,
+      logType: 'egg',
+      categories: ['logger', 'errorLogger', 'coreLogger', 'scheduleLogger'],
+      tcp: {
+        maxConnections: 10,
+        retryInterval: 500,
+        timeout: 10 * 60 * 1000,
+      },
+    },
+  };
+
   return {
     ...config,
     ...userConfig,
+    ...extenalConfig,
     superRouter: {
       access: {
         enable: true,
